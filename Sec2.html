@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +67,7 @@ header {
     color: #fff;
     text-decoration: none;
 }
+
 ul {
     display: flex;
     gap: .6rem;
@@ -75,6 +75,7 @@ ul {
     background-color: transparent;
     overflow: hidden;
 }
+
 li a {
     display: inline-block;
     padding: .3rem 1rem;
@@ -157,11 +158,134 @@ li a:hover {
     box-shadow: 0 0 10px #D1D9E6;
 }
 
+/* Section 1 End */
 
+/* Roundin sec */
   .main {
     position: relative;
   }
-  0% {
+  .big-circle {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 3px solid #bbbbbb;
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    animation: Rotate 20s linear infinite;
+    -webkit-animation: Rotate 20s linear infinite;
+  }
+  .icon-block {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+  }
+  .icon-block img {
+    margin: 0px auto;
+    width: 60%;
+    animation: Rotate-reverse 20s linear infinite;
+    -webkit-animation: Rotate-reverse 20s linear infinite;
+  }
+  .icon-block:first-child {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+  .icon-block:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+  }
+  .icon-block:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+  }
+  .icon-block:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+  .rounding-sec {
+    position: relative;
+    height: 400px;
+    width: 400px;
+  }
+  .images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+  /* keyframe animation */
+  
+  @keyframes Rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes Rotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes Rotate-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  @-webkit-keyframes Rotate-reverse {
+    from {
+      -webkit-transform: rotate(360deg);
+    }
+    to {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  
+/* Animation */
+@keyframes leftSideAni {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes navani {
+    0% {
         transform: translateY(100px);
         opacity: 0;
     }
@@ -272,27 +396,44 @@ li a:hover {
                 </div>
             </label>
             <ul>
-                <li><a href="index.html" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#" class="active" style="--navAni:1">Home</a></li>
                 <li><a href="#" style="--navAni:2">About</a></li>
                 <li><a href="#" style="--navAni:3">Skills</a></li>
                 <li><a href="#" style="--navAni:4">Portfolio</a></li>
                 <li><a href="#" style="--navAni:5">Contact</a></li>
             </ul>
         </div>
-   
     </header>
+
+
     <section class="container">
         <div class="main">
+            <div class="rounding-sec">
+                <div class="big-circle">
+                    <div class="icon-block">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIHDQ_CU0W38ktREqnPwdVlGCdA_e4xbaDK9NrjFOpD2AqdcajDV3c9_R3vp034nrC9eyvMThwY8ifNpmH3_8GMg_SzAsLKcWQeSskaVl8HjVtLWilhcBNwfep0yRxq-Z_klBXoYTVX0BaE39VwJ2a-drZup5i8owkdaZF0-KhCaodrtN2Rii9HPZrdlk/s1600/github.png"
+                            alt="" />
+                    </div>
+                    <div class="icon-block">
+                       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoPvxJtYJq2-7BDn6LGcQ6QsT3Bo0vxkKu8WAOZnqsHIiTtGJqsHHHWlqqYN4iQFlVaqTaq7AFkWbY5Wrqxvk9Se1Wc_rjA7UKZoXHoxqSWXyaTg9aL9RC37H78NTnT4TwePdwqEYwVw8VxtjPoy6eG-f7RTJhX0JCa0lPmpfaz69hJ1ZHI9seBrUuvf4/s64/instagram.png"
+                            alt="" />
+                    </div>
+                    <div class="icon-block">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-WWnXxgKNxwqarx8Vr_xpaCcwOQbv7bpFxWXy1o7DCq7jZNiT3CFdAo52AvJol-C-3InAzj6B4isdJVwVCAlUY9jxqgM43wDXrmfsqL4PGr-fsBG0YjcOzwAHFscoDXg3EGlhupxjKRwrMe7Y2bX9VzTc-RY95A03bV1avKnjwJZjh0HKbGZDEa73mPU/s1600/telegram.png"
+                            alt="" />
+                    </div>
+                    <div class="icon-block">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiejpFbnjtnjhErKo-66_ATecAMmYtSrLzQYdIRMRAxLHtgMUZKnA6jGJQsTMnrniZmMhTZydWkR-l2cpZcGEBGlI4Ptl9ogR-NSPF2wNO5FQdMlL_xaGHQfPnSRIh0Lg4JX0PJLjg9p-tAL9Y8qFbbuGIW3YoolXiMja2qujyDjcFPYGzsPu-RyHle2Jc/s1600/youtube.png" alt="" />
+                    </div>
+                </div>
                 <div class="images">
-                    <img src="final.jpeg" alt="" class="img-w">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwX1hNs1uTxT4esqcM-g4cIPSSqGfCotsrSqPkI8aQMNoJMxECIOqHeVAPlGsSD6uEn7K5Fv_9m-vVdt4kaig7dInalmeBEnMUMbcFloJX3-y_lh6J8zz-PkIENB_1k8iAx5YEdP4FlBD0_U_JWbZC9TkP70Yd71hxULL5SbwvsZIen4_dtOOltgBpcGA/s1600/img_1.png" alt="" class="img-w">
                 </div>
             </div>
-
-
             <div class="detail">
                 <h3>Hi, I'm</h3>
-                <h1><span style="color:#00E8F8;">Santhosh Varma Thamishetty</h1>
-                <p>A Cogitative Software Developer</p
+                <h1><span style="color:#f9532d;">Santhosh Varma</span>Thamishetty</h1>
+                <p>I'm a professional Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by web development solutions</p>
             <button>Contact Us</button>
             </div>
         </div>
@@ -302,4 +443,3 @@ li a:hover {
     console.log();
 </script>
 </html>
- 
